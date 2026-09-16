@@ -577,20 +577,29 @@
 
     .mobile-cta{
       position:fixed;
-      left:12px;
-      right:12px;
-      bottom:12px;
+      right:18px;
+      bottom:18px;
       z-index:60;
       display:none;
+      width:58px;
+      height:58px;
       align-items:center;
       justify-content:center;
-      min-height:58px;
-      border-radius:999px;
-      background:#147c54;
+      border-radius:50%;
+      background:#25D366;
       color:#fff;
       text-decoration:none;
-      font-weight:800;
-      box-shadow:0 16px 34px rgba(0,0,0,.25);
+      box-shadow:0 12px 28px rgba(0,0,0,.24);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .mobile-cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 34px rgba(0,0,0,.28);
+    }
+    .mobile-cta svg{
+      width:30px;
+      height:30px;
+      fill:currentColor;
     }
 
     .sr-only{
@@ -658,7 +667,7 @@
     /* ===== MOBILE FIRST CONVERSION REFINEMENTS ===== */
     @media (max-width: 720px){
       body{
-        padding-bottom:calc(82px + env(safe-area-inset-bottom));
+        padding-bottom:0;
       }
 
       .wrap{
@@ -1129,14 +1138,14 @@
 
       .mobile-cta{
         display:flex;
-        left:10px;
-        right:10px;
-        bottom:max(10px, env(safe-area-inset-bottom));
-        min-height:58px;
-        padding:0 18px;
-        border:1px solid rgba(255,255,255,.2);
-        font-size:.96rem;
-        letter-spacing:.01em;
+        left:auto;
+        right:16px;
+        bottom:max(16px, env(safe-area-inset-bottom));
+        width:58px;
+        height:58px;
+        min-height:0;
+        padding:0;
+        border:1px solid rgba(255,255,255,.22);
       }
     }
 
@@ -1177,6 +1186,17 @@
 
       .gallery{
         grid-auto-columns:88%;
+      }
+
+      .mobile-cta{
+        right:12px;
+        width:54px;
+        height:54px;
+      }
+
+      .mobile-cta svg{
+        width:28px;
+        height:28px;
       }
     }
 
@@ -1251,8 +1271,7 @@
 
       <div class="header__aside">
         <div class="header__note">
-          Atendimento particular<br>
-          <strong>Dona Clara e Funcionários</strong>
+          <strong>Atendimento particular em Belo Horizonte</strong>
         </div>
         <a class="btn js-whatsapp" href="https://wa.me/5531972340510" target="_blank" rel="noopener" data-cta="header" data-intent="consulta">
           Ver horários
@@ -1756,8 +1775,11 @@
     </div>
   </footer>
 
-  <a class="mobile-cta js-whatsapp" href="https://wa.me/5531972340510" target="_blank" rel="noopener" data-cta="sticky-mobile" data-intent="consulta" aria-label="Ver horários disponíveis pelo WhatsApp">
-    Ver horários no WhatsApp
+  <a class="mobile-cta js-whatsapp" href="https://wa.me/5531972340510" target="_blank" rel="noopener" data-cta="sticky-mobile" data-intent="consulta" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.25 8.24z"/>
+    </svg>
   </a>
 
   <script>
